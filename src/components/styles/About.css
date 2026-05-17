@@ -248,8 +248,11 @@
     padding: 60px 0;
   }
   .name-text {
-    font-size: 3.2rem;
+    font-size: 3.8rem;
     text-align: center;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin: 10px 0;
   }
   
   .hello-text {
@@ -260,6 +263,15 @@
 
   .intro-badge {
     margin: 0 auto 15px auto;
+    background: rgba(194, 164, 255, 0.15);
+    border: 1px solid rgba(194, 164, 255, 0.3);
+    padding: 8px 20px;
+  }
+  
+  .badge-text {
+    font-size: 0.95rem;
+    color: #ffffff;
+    font-weight: 700;
   }
   
   .description {
