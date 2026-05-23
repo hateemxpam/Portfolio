@@ -79,3 +79,34 @@
     font-size: 2rem;
   }
 }
+
+/* Mobile grid layout for small screens */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 14px;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 420px) {
+  .tech-card {
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    border-radius: 12px;
+  }
+  .tech-icon {
+    font-size: 2rem;
+    margin-bottom: 6px;
+  }
+  .tech-name {
+    font-size: 0.75rem;
+  }
+  .techstack-title {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+  }
+}

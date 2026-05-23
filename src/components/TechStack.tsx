@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import { useEffect, useState } from "react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -85,6 +86,15 @@ const techData = [
 ];
 
 const TechStack = () => {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1024);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const row1 = techData.slice(0, Math.ceil(techData.length / 2));
   const row2 = techData.slice(Math.ceil(techData.length / 2));
 
@@ -92,37 +102,42 @@ const TechStack = () => {
     <section className="techstack-container" id="techstack">
       <h2 className="techstack-title">My Techstack</h2>
 
-      <div className="marquee-wrapper">
-        <Marquee
-          gradient={false}
-          speed={45}
-          pauseOnHover={true}
-          direction="left"
-        >
-          {row1.map((tech, index) => (
-            <div className="tech-card" key={index}>
-              <div className="tech-icon">{tech.icon}</div>
-              <span className="tech-name">{tech.name}</span>
-            </div>
-          ))}
-        </Marquee>
-      </div>
+      {!isMobile && (
+        <>
+          <div className="marquee-wrapper">
+            <Marquee gradient={false} speed={45} pauseOnHover={true} direction="left">
+              {row1.map((tech, index) => (
+                <div className="tech-card" key={index}>
+                  <div className="tech-icon">{tech.icon}</div>
+                  <span className="tech-name">{tech.name}</span>
+                </div>
+              ))}
+            </Marquee>
+          </div>
 
-      <div className="marquee-wrapper">
-        <Marquee
-          gradient={false}
-          speed={45}
-          pauseOnHover={true}
-          direction="right"
-        >
-          {row2.map((tech, index) => (
+          <div className="marquee-wrapper">
+            <Marquee gradient={false} speed={45} pauseOnHover={true} direction="right">
+              {row2.map((tech, index) => (
+                <div className="tech-card" key={index}>
+                  <div className="tech-icon">{tech.icon}</div>
+                  <span className="tech-name">{tech.name}</span>
+                </div>
+              ))}
+            </Marquee>
+          </div>
+        </>
+      )}
+
+      {isMobile && (
+        <div className="tech-grid">
+          {techData.map((tech, index) => (
             <div className="tech-card" key={index}>
               <div className="tech-icon">{tech.icon}</div>
               <span className="tech-name">{tech.name}</span>
             </div>
           ))}
-        </Marquee>
-      </div>
+        </div>
+      )}
     </section>
   );
 };
