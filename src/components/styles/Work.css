@@ -186,6 +186,7 @@
   align-items: center;
   justify-content: center;
   padding: 40px;
+  overscroll-behavior: contain;
 }
 
 .modal-content {
@@ -199,6 +200,7 @@
   overflow: hidden;
   box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8);
   display: flex;
+  overscroll-behavior: contain;
 }
 
 .modal-close {
@@ -428,15 +430,22 @@
   
   .modal-overlay {
     padding: 15px 10px;
+    align-items: flex-start;
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .modal-content {
     width: 95%;
-    max-height: 85vh;
+    max-height: calc(100vh - 24px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
     margin: 0 auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
   }
 
   .modal-close {
@@ -464,6 +473,7 @@
   .modal-info {
     padding: 20px;
     padding-top: 35px;
+    overflow: visible;
   }
 
   .project-detail-text {
@@ -478,6 +488,7 @@
 
   .modal-image {
     height: 180px;
+    flex-shrink: 0;
   }
 
   .modal-btn {
@@ -554,6 +565,38 @@
   .project-link,
   .view-details {
     font-size: 0.68rem;
+  }
+
+  .modal-overlay {
+    padding: 10px 8px;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-height: calc(100vh - 16px);
+    border-radius: 18px;
+  }
+
+  .modal-image {
+    height: 160px;
+  }
+
+  .modal-info {
+    padding: 16px;
+    padding-top: 30px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.45rem;
+  }
+
+  .project-detail-text {
+    font-size: 0.9rem;
+  }
+
+  .features-list li {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 }
 

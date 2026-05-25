@@ -87,6 +87,7 @@ const Work = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const modalRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const scrollPositionRef = useRef(0);
 
   const openModal = (e: React.MouseEvent, project: any) => {
     e.preventDefault();
@@ -99,7 +100,28 @@ const Work = () => {
   };
 
   useEffect(() => {
-    if (selectedProject && modalRef.current && overlayRef.current) {
+    const body = document.body;
+
+    if (!selectedProject) {
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      body.style.width = "";
+      body.style.overflow = "auto";
+      window.scrollTo(0, scrollPositionRef.current);
+      return;
+    }
+
+    scrollPositionRef.current = window.scrollY;
+    body.style.position = "fixed";
+    body.style.top = `-${scrollPositionRef.current}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
+
+    if (modalRef.current && overlayRef.current) {
       gsap.fromTo(overlayRef.current,
         { opacity: 0 },
         { opacity: 1, duration: 0.3 }
@@ -108,10 +130,18 @@ const Work = () => {
         { opacity: 0, scale: 0.8, y: 50 },
         { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "back.out(1.7)" }
       );
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
+      
     }
+
+    return () => {
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      body.style.width = "";
+      body.style.overflow = "auto";
+      window.scrollTo(0, scrollPositionRef.current);
+    };
   }, [selectedProject]);
 
   return (
