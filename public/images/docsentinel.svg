@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <radialGradient id="bg" cx="70%" cy="25%" r="85%">
+      <stop offset="0" stop-color="#2a1a4a"/>
+      <stop offset="0.55" stop-color="#130d1f"/>
+      <stop offset="1" stop-color="#0b080c"/>
+    </radialGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c2a4ff"/>
+      <stop offset="1" stop-color="#6e45e2"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#c2a4ff" stroke-opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+
+  <!-- Shield -->
+  <g transform="translate(250 330)">
+    <path d="M0 -150 L130 -100 V20 C130 110 70 165 0 195 C-70 165 -130 110 -130 20 V-100 Z" fill="url(#acc)" opacity="0.18"/>
+    <path d="M0 -150 L130 -100 V20 C130 110 70 165 0 195 C-70 165 -130 110 -130 20 V-100 Z" fill="none" stroke="url(#acc)" stroke-width="8"/>
+    <path d="M-55 15 L-15 55 L60 -30" fill="none" stroke="#e9ddff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="250" y="610" text-anchor="middle" font-size="58" font-weight="700" fill="#ffffff">DocSentinel</text>
+  <text x="250" y="660" text-anchor="middle" font-size="26" fill="#c2a4ff" letter-spacing="3">HIGH-TRUST RAG</text>
+
+  <!-- Pipeline -->
+  <g font-size="26" font-weight="600" fill="#ffffff">
+    <g transform="translate(520 150)">
+      <rect width="960" height="92" rx="20" fill="#1b1430" stroke="#c2a4ff" stroke-opacity="0.35" stroke-width="2"/>
+      <text x="36" y="58" fill="#adacac" font-weight="400">Q:</text>
+      <text x="82" y="58">What are data subject rights under GDPR?</text>
+    </g>
+    <path d="M1000 250 V290" stroke="#c2a4ff" stroke-width="4" stroke-opacity="0.6"/>
+    <g transform="translate(520 295)">
+      <rect width="300" height="110" rx="20" fill="#1b1430" stroke="#c2a4ff" stroke-opacity="0.35" stroke-width="2"/>
+      <text x="150" y="50" text-anchor="middle">BM25</text>
+      <text x="150" y="84" text-anchor="middle" font-size="20" fill="#adacac" font-weight="400">keyword</text>
+      <rect x="330" width="300" height="110" rx="20" fill="#1b1430" stroke="#c2a4ff" stroke-opacity="0.35" stroke-width="2"/>
+      <text x="480" y="50" text-anchor="middle">Qdrant</text>
+      <text x="480" y="84" text-anchor="middle" font-size="20" fill="#adacac" font-weight="400">semantic</text>
+      <rect x="660" width="300" height="110" rx="20" fill="url(#acc)" opacity="0.9"/>
+      <text x="810" y="50" text-anchor="middle">RRF + Rerank</text>
+      <text x="810" y="84" text-anchor="middle" font-size="20" fill="#f1eaff" font-weight="400">cross-encoder</text>
+    </g>
+    <path d="M1000 415 V455" stroke="#c2a4ff" stroke-width="4" stroke-opacity="0.6"/>
+    <g transform="translate(520 460)">
+      <rect width="465" height="92" rx="20" fill="#14261d" stroke="#3ecf8e" stroke-opacity="0.6" stroke-width="2"/>
+      <circle cx="44" cy="46" r="12" fill="#3ecf8e"/>
+      <text x="72" y="56">Gate 1 · confidence ≥ 0.50</text>
+      <rect x="495" width="465" height="92" rx="20" fill="#14261d" stroke="#3ecf8e" stroke-opacity="0.6" stroke-width="2"/>
+      <circle cx="539" cy="46" r="12" fill="#3ecf8e"/>
+      <text x="567" y="56">Gate 2 · hallucination check</text>
+    </g>
+    <path d="M1000 562 V602" stroke="#c2a4ff" stroke-width="4" stroke-opacity="0.6"/>
+    <g transform="translate(520 607)">
+      <rect width="960" height="250" rx="24" fill="#120e1c" stroke="#c2a4ff" stroke-opacity="0.5" stroke-width="2"/>
+      <text x="36" y="56" fill="#c2a4ff" font-size="22" letter-spacing="2">CITED ANSWER</text>
+      <rect x="36" y="82" width="820" height="16" rx="8" fill="#ffffff" opacity="0.75"/>
+      <rect x="36" y="114" width="700" height="16" rx="8" fill="#ffffff" opacity="0.5"/>
+      <rect x="36" y="146" width="760" height="16" rx="8" fill="#ffffff" opacity="0.5"/>
+      <g font-size="20">
+        <rect x="36" y="186" width="210" height="40" rx="20" fill="#6e45e2" opacity="0.35"/>
+        <text x="141" y="213" text-anchor="middle" fill="#e9ddff">[1] GDPR · p.12</text>
+        <rect x="262" y="186" width="230" height="40" rx="20" fill="#6e45e2" opacity="0.35"/>
+        <text x="377" y="213" text-anchor="middle" fill="#e9ddff">[2] AI Act · p.47</text>
+      </g>
+    </g>
+  </g>
+</svg>

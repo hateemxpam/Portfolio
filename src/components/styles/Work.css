@@ -172,6 +172,70 @@
   color: #fff;
 }
 
+.project-card:focus-visible {
+  outline: 2px solid var(--accentColor);
+  outline-offset: 4px;
+}
+
+.project-link.project-link-private {
+  color: #8f8a9e;
+  cursor: default;
+}
+
+.project-link.project-link-private svg {
+  font-size: 0.95em;
+}
+
+.project-link.project-link-private:hover {
+  opacity: 1;
+  gap: 10px;
+}
+
+.project-live-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(17, 17, 25, 0.75);
+  border: 1px solid rgba(62, 207, 142, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.project-live-badge::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3ecf8e;
+  box-shadow: 0 0 8px #3ecf8e;
+}
+
+.modal-btn.private {
+  background: rgba(255, 255, 255, 0.03);
+  color: #8f8a9e;
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .project-live-badge {
+    top: 8px;
+    right: 8px;
+    padding: 3px 8px;
+    font-size: 0.6rem;
+  }
+}
+
 /* Modal Styles */
 .modal-overlay {
   position: fixed;

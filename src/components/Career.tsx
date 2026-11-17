@@ -13,6 +13,26 @@ const Career = () => {
             <div className="career-dot"></div>
           </div>
 
+          <div className="career-info-box fulltime">
+            <div className="career-info-in">
+              <div className="career-role">
+                <span className="type-tag">Full-time</span>
+                <h4>Junior Data Scientist</h4>
+                <h5>United Bank Limited (UBL), Lahore</h5>
+              </div>
+              <div className="career-date">
+                <h3>Jul 2026 - Present</h3>
+              </div>
+            </div>
+            <p>
+              Built an OCR extraction pipeline on Azure Document Intelligence and Azure
+              OpenAI for Murabaha financing (Shariah audit) that turns scanned transaction
+              packs into review-ready Excel and JSON, cutting processing from an hour or
+              more of manual work to about a minute per pack. Also validated amended
+              fraud-detection rules for U Secure on live pipeline runs.
+            </p>
+          </div>
+
           <div className="career-info-box internship">
             <div className="career-info-in">
               <div className="career-role">
@@ -25,9 +45,9 @@ const Career = () => {
               </div>
             </div>
             <p>
-              Developed and maintained full-stack web applications using the MERN Stack,
-              integrating AI solutions to enhance system functionality. Designed and
-              implemented REST APIs to streamline communication between services.
+              Delivered LLM-backed modules across multiple AI-integrated MERN
+              applications and owned debugging and QA end to end, tightening the
+              integration between AI inference layers and REST API endpoints.
             </p>
           </div>
 
@@ -43,9 +63,9 @@ const Career = () => {
               </div>
             </div>
             <p>
-              Developed and maintained full-stack web applications using the MERN stack
-              and collaborated with cross-functional teams on real-world projects to
-              enhance technical skills and professional software development practices.
+              Shipped full-stack features and bug fixes on a production MERN codebase
+              with cross-functional teams under senior developer mentorship, resolving
+              frontend-backend integration issues to improve REST API reliability.
             </p>
           </div>
 
@@ -61,9 +81,9 @@ const Career = () => {
               </div>
             </div>
             <p>
-              Final-year student specializing in web development and AI-driven systems.
-              Recognized on the Dean's List of Honors (Fall 2025) for
-              academic excellence.
+              Graduated with a focus on web development and AI-driven systems.
+              Recognized twice on the Dean's List of Honors (Fall 2025 and
+              Spring 2026).
             </p>
           </div>
 
@@ -71,7 +91,7 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <span className="type-tag">Education</span>
-                <h4>Fsc Pre Engineering</h4>
+                <h4>FSc Pre-Engineering</h4>
                 <h5>Sadiq Public School, Bahawalpur</h5>
               </div>
               <div className="career-date">
@@ -79,8 +99,8 @@ const Career = () => {
               </div>
             </div>
             <p>
-              Completed higher secondary education with a focus on core engineering
-              fundamentals.
+              Completed higher secondary education in core engineering fundamentals
+              with 88.7%.
             </p>
           </div>
         </div>

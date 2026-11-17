@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="35%" r="90%">
+      <stop offset="0" stop-color="#3a1630"/>
+      <stop offset="0.55" stop-color="#170d1a"/>
+      <stop offset="1" stop-color="#0b080c"/>
+    </radialGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff7a9a"/>
+      <stop offset="1" stop-color="#8c52ff"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#ff7a9a" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+
+  <!-- Bank statement under inspection -->
+  <g transform="translate(140 170)">
+    <rect width="440" height="580" rx="16" fill="#efeaf2"/>
+    <rect x="34" y="34" width="200" height="24" rx="6" fill="#3b3550"/>
+    <text x="34" y="100" font-size="20" fill="#6b6580" font-weight="600">BANK STATEMENT</text>
+    <g font-size="17" fill="#4a4560">
+      <text x="34" y="150" font-weight="700">Date</text><text x="160" y="150" font-weight="700">Debit</text><text x="300" y="150" font-weight="700">Balance</text>
+      <path d="M34 164H406" stroke="#b9b3c7" stroke-width="2"/>
+      <text x="34" y="200">01-Jan</text><text x="160" y="200">5,000</text><text x="300" y="200">95,000</text>
+      <text x="34" y="240">04-Jan</text><text x="160" y="240">2,500</text><text x="300" y="240">92,500</text>
+      <rect x="24" y="258" width="392" height="40" rx="6" fill="#ff4d6d" opacity="0.18" stroke="#ff4d6d" stroke-width="2"/>
+      <text x="34" y="284">09-Jan</text><text x="160" y="284">1,200</text><text x="300" y="284" fill="#d6204a" font-weight="700">98,300</text>
+      <text x="34" y="330">12-Jan</text><text x="160" y="330">3,000</text><text x="300" y="330">95,300</text>
+      <text x="34" y="370">18-Jan</text><text x="160" y="370">4,750</text><text x="300" y="370">90,550</text>
+    </g>
+    <g fill="#c9c3d6">
+      <rect x="34" y="420" width="372" height="12" rx="6"/>
+      <rect x="34" y="446" width="300" height="12" rx="6"/>
+      <rect x="34" y="472" width="340" height="12" rx="6"/>
+    </g>
+    <!-- magnifier -->
+    <g transform="translate(345 300)">
+      <circle r="78" fill="#ffffff" fill-opacity="0.08" stroke="url(#acc)" stroke-width="12"/>
+      <path d="M56 56 L120 120" stroke="url(#acc)" stroke-width="22" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Findings -->
+  <g transform="translate(680 150)" font-size="24">
+    <text x="0" y="0" fill="#ff9db4" font-size="22" letter-spacing="2">EXPLAINABLE FINDINGS</text>
+    <g>
+      <rect y="26" width="520" height="96" rx="18" fill="#2a1220" stroke="#ff4d6d" stroke-opacity="0.6" stroke-width="2"/>
+      <rect x="22" y="52" width="80" height="34" rx="17" fill="#ff4d6d"/><text x="62" y="76" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">HIGH</text>
+      <text x="120" y="66" fill="#ffffff" font-weight="600">Running balance break</text>
+      <text x="120" y="98" fill="#c7b9c6" font-size="19">Row 09-Jan looks edited</text>
+    </g>
+    <g>
+      <rect y="140" width="520" height="96" rx="18" fill="#2a2012" stroke="#f5b942" stroke-opacity="0.6" stroke-width="2"/>
+      <rect x="22" y="166" width="80" height="34" rx="17" fill="#f5b942"/><text x="62" y="190" text-anchor="middle" font-size="18" font-weight="700" fill="#2a2012">MED</text>
+      <text x="120" y="180" fill="#ffffff" font-weight="600">Font differs in column</text>
+      <text x="120" y="212" fill="#c7b9c6" font-size="19">Typography forensics</text>
+    </g>
+    <g>
+      <rect y="254" width="520" height="96" rx="18" fill="#1d1a2a" stroke="#8c52ff" stroke-opacity="0.6" stroke-width="2"/>
+      <rect x="22" y="280" width="80" height="34" rx="17" fill="#8c52ff"/><text x="62" y="304" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">WEAK</text>
+      <text x="120" y="294" fill="#ffffff" font-weight="600">Edited with Word</text>
+      <text x="120" y="326" fill="#c7b9c6" font-size="19">PDF producer metadata</text>
+    </g>
+    <g>
+      <rect y="368" width="520" height="96" rx="18" fill="#122a1f" stroke="#3ecf8e" stroke-opacity="0.6" stroke-width="2"/>
+      <rect x="22" y="394" width="80" height="34" rx="17" fill="#3ecf8e"/><text x="62" y="418" text-anchor="middle" font-size="18" font-weight="700" fill="#0d2418">PASS</text>
+      <text x="120" y="408" fill="#ffffff" font-weight="600">CNIC consistent</text>
+      <text x="120" y="440" fill="#c7b9c6" font-size="19">Across all documents</text>
+    </g>
+  </g>
+
+  <!-- Risk gauge -->
+  <g transform="translate(1425 430)">
+    <path d="M-120 60 A130 130 0 1 1 120 60" fill="none" stroke="#2c2233" stroke-width="26" stroke-linecap="round"/>
+    <path d="M-120 60 A130 130 0 1 1 112 -72" fill="none" stroke="url(#acc)" stroke-width="26" stroke-linecap="round"/>
+    <text y="10" text-anchor="middle" font-size="84" font-weight="800" fill="#ffffff">72</text>
+    <text y="56" text-anchor="middle" font-size="24" fill="#ff9db4" letter-spacing="2">RISK · HIGH</text>
+  </g>
+  <text x="1425" y="560" text-anchor="middle" font-size="22" fill="#c7b9c6">for human review</text>
+</svg>

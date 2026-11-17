@@ -121,6 +121,18 @@
   padding-left: 20px;
   margin-left: -22px;
 }
+
+.fulltime .type-tag {
+  background: rgba(136, 211, 206, 0.08);
+  border-color: rgba(136, 211, 206, 0.3);
+  color: #88d3ce;
+}
+
+.career-info-box.fulltime {
+  border-left: 2px solid rgba(136, 211, 206, 0.45);
+  padding-left: 20px;
+  margin-left: -22px;
+}
 .career-timeline {
   position: absolute;
   top: -50px;

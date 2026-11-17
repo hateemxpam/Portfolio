@@ -8,81 +8,86 @@ import {
   FaNodeJs,
   FaGithub,
   FaDocker,
-  FaAws,
   FaPython,
   FaGitAlt,
-  FaJira
+  FaJira,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
-  SiTypescript,
   SiMongodb,
   SiExpress,
   SiPytorch,
   SiFastapi,
-  SiSupabase,
-  SiPrisma,
   SiLangchain,
   SiHuggingface,
   SiPostman,
-  SiVite,
   SiRedux,
   SiMysql,
-  SiJquery,
-  SiKubernetes,
+  SiPostgresql,
+  SiCplusplus,
+  SiPydantic,
+  SiPytest,
+  SiStreamlit,
+  SiOpenai,
+  SiOllama,
 } from "react-icons/si";
-import { GiBrain, GiProcessor, GiShieldReflect, GiConversation } from "react-icons/gi";
-import { MdApi, MdSchema } from "react-icons/md";
-import { DiScrum } from "react-icons/di";
+import { GiBrain, GiProcessor, GiConversation } from "react-icons/gi";
+import { MdApi, MdDocumentScanner, MdFactCheck, MdTranslate } from "react-icons/md";
+import { TbDatabaseSearch, TbBrandAzure } from "react-icons/tb";
+import { VscAzure } from "react-icons/vsc";
 import "./styles/TechStack.css";
 
 const techData = [
-  // Frontend
-  { name: "React", icon: <FaReact color="#61DAFB" />, category: "frontend" },
-  { name: "JavaScript", icon: <FaJs color="#F7DF1E" />, category: "frontend" },
-  { name: "HTML5", icon: <FaHtml5 color="#E34F26" />, category: "frontend" },
-  { name: "CSS3", icon: <FaCss3Alt color="#1572B6" />, category: "frontend" },
-  { name: "Redux", icon: <SiRedux color="#764ABC" />, category: "frontend" },
-  { name: "Tailwind", icon: <SiTailwindcss color="#06B6D4" />, category: "frontend" },
-  { name: "jQuery", icon: <SiJquery color="#0769AD" />, category: "frontend" },
-  { name: "TypeScript", icon: <SiTypescript color="#3178C6" />, category: "frontend" },
-  { name: "Context API", icon: <FaReact color="#61DAFB" />, category: "frontend" },
-  { name: "Ajax", icon: <SiJquery color="#0769AD" />, category: "frontend" },
-  
-  // Backend & APIs
-  { name: "Node.js", icon: <FaNodeJs color="#339933" />, category: "backend" },
-  { name: "Express.js", icon: <SiExpress color="#ffffff" />, category: "backend" },
-  { name: "Python", icon: <FaPython color="#3776AB" />, category: "backend" },
-  { name: "FastAPI", icon: <SiFastapi color="#05998B" />, category: "backend" },
-  { name: "RESTful APIs", icon: <MdApi color="#00ff88" />, category: "backend" },
-  { name: "JSON", icon: <MdSchema color="#ffffff" />, category: "backend" },
-  
   // AI & ML
   { name: "RAG", icon: <GiBrain color="#c2a4ff" />, category: "ai" },
   { name: "LangChain", icon: <SiLangchain color="#ffffff" />, category: "ai" },
-  { name: "PyTorch", icon: <SiPytorch color="#EE4C2C" />, category: "ai" },
-  { name: "Multimodal AI", icon: <GiProcessor color="#ffffff" />, category: "ai" },
+  { name: "Azure OpenAI", icon: <VscAzure color="#0089D6" />, category: "ai" },
+  { name: "OpenAI API", icon: <SiOpenai color="#ffffff" />, category: "ai" },
+  { name: "Hybrid Retrieval", icon: <TbDatabaseSearch color="#c2a4ff" />, category: "ai" },
+  { name: "RAGAs", icon: <MdFactCheck color="#3ECF8E" />, category: "ai" },
+  { name: "Azure OCR", icon: <MdDocumentScanner color="#0089D6" />, category: "ai" },
   { name: "Transformers", icon: <SiHuggingface color="#FFD21E" />, category: "ai" },
   { name: "Prompt Eng.", icon: <GiConversation color="#3ECF8E" />, category: "ai" },
-  { name: "FAISS", icon: <GiBrain color="#ffffff" />, category: "ai" },
-  { name: "Ollama", icon: <GiShieldReflect color="#ffffff" />, category: "ai" },
-  
+  { name: "Multimodal AI", icon: <GiProcessor color="#ffffff" />, category: "ai" },
+  { name: "NLP", icon: <MdTranslate color="#c2a4ff" />, category: "ai" },
+  { name: "PyTorch", icon: <SiPytorch color="#EE4C2C" />, category: "ai" },
+  { name: "Ollama", icon: <SiOllama color="#ffffff" />, category: "ai" },
+
+  // Languages
+  { name: "Python", icon: <FaPython color="#3776AB" />, category: "language" },
+  { name: "JavaScript", icon: <FaJs color="#F7DF1E" />, category: "language" },
+  { name: "C++", icon: <SiCplusplus color="#00599C" />, category: "language" },
+
+  // Backend & APIs
+  { name: "FastAPI", icon: <SiFastapi color="#05998B" />, category: "backend" },
+  { name: "Pydantic", icon: <SiPydantic color="#E92063" />, category: "backend" },
+  { name: "Node.js", icon: <FaNodeJs color="#339933" />, category: "backend" },
+  { name: "Express.js", icon: <SiExpress color="#ffffff" />, category: "backend" },
+  { name: "RESTful APIs", icon: <MdApi color="#00ff88" />, category: "backend" },
+
+  // Frontend
+  { name: "React", icon: <FaReact color="#61DAFB" />, category: "frontend" },
+  { name: "Redux", icon: <SiRedux color="#764ABC" />, category: "frontend" },
+  { name: "Tailwind", icon: <SiTailwindcss color="#06B6D4" />, category: "frontend" },
+  { name: "HTML5", icon: <FaHtml5 color="#E34F26" />, category: "frontend" },
+  { name: "CSS3", icon: <FaCss3Alt color="#1572B6" />, category: "frontend" },
+
   // Databases
-  { name: "MongoDB", icon: <SiMongodb color="#47A248" />, category: "database" },
   { name: "MySQL", icon: <SiMysql color="#4479A1" />, category: "database" },
-  { name: "Supabase", icon: <SiSupabase color="#3ECF8E" />, category: "database" },
-  { name: "Prisma", icon: <SiPrisma color="#ffffff" />, category: "database" },
-  
-  // DevOps & Tools
+  { name: "MongoDB", icon: <SiMongodb color="#47A248" />, category: "database" },
+  { name: "PostgreSQL", icon: <SiPostgresql color="#4169E1" />, category: "database" },
+  { name: "FAISS", icon: <GiBrain color="#ffffff" />, category: "database" },
+  { name: "Qdrant", icon: <TbDatabaseSearch color="#DC244C" />, category: "database" },
+
+  // Cloud & Tools
+  { name: "Azure AI", icon: <TbBrandAzure color="#0089D6" />, category: "devops" },
   { name: "Docker", icon: <FaDocker color="#2496ED" />, category: "devops" },
-  { name: "AWS", icon: <FaAws color="#FF9900" />, category: "devops" },
-  { name: "Kubernetes", icon: <SiKubernetes color="#326CE5" />, category: "devops" },
+  { name: "Streamlit", icon: <SiStreamlit color="#FF4B4B" />, category: "tools" },
+  { name: "pytest", icon: <SiPytest color="#0A9EDC" />, category: "tools" },
   { name: "Git", icon: <FaGitAlt color="#F05032" />, category: "tools" },
   { name: "GitHub", icon: <FaGithub color="#ffffff" />, category: "tools" },
   { name: "Jira", icon: <FaJira color="#0052CC" />, category: "tools" },
-  { name: "Scrum", icon: <DiScrum color="#ffffff" />, category: "tools" },
   { name: "Postman", icon: <SiPostman color="#FF6C37" />, category: "tools" },
-  { name: "Vite", icon: <SiVite color="#646CFF" />, category: "tools" },
 ];
 
 const TechStack = () => {

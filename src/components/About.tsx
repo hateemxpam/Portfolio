@@ -13,29 +13,29 @@ const About = () => {
           <div className="about-text-wrapper">
             <div className="intro-badge">
               <span className="dot"></span>
-              <span className="badge-text">Software Engineer</span>
+              <span className="badge-text">Junior Data Scientist · UBL</span>
             </div>
             <h2 className="hello-text">Hello, I'm</h2>
             <h1 className="name-text">
               <span className="gradient-text">Hateem</span>
             </h1>
             <p className="description para">
-              A final-year Software Engineering student at FAST-NUCES, Islamabad,
-              specializing in full-stack web development and AI-driven systems.
-              Proficient in the MERN stack with hands-on experience in cloud-native
-              technologies (Docker, Kubernetes) and RAG-based applications.
-              I excel at building scalable web applications and integrating AI solutions
-              for real-world problems.
+              A Software Engineering graduate from FAST-NUCES, Islamabad, and a Junior
+              Data Scientist at United Bank Limited. I build RAG and LLM-based systems,
+              from document intelligence and OCR automation for banking workflows to
+              cited, hallucination-checked answers over policy documents. I work across
+              the full AI lifecycle (retrieval, pipeline design, LLM integration,
+              evaluation and deployment) on a full-stack foundation of the MERN stack
+              and FastAPI.
             </p>
 
             <div className="about-buttons">
               <a
                 href="/Hateem_CV.pdf"
                 download="Hateem_Khush_Bakht_CV.pdf"
+                type="application/pdf"
                 className="btn btn-primary"
-                onClick={() => {
-                  window.location.href = "/Hateem_CV.pdf";
-                }}
+                data-cursor="disable"
               >
                 <FiDownload /> Download CV
               </a>
